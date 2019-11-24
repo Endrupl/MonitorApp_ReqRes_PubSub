@@ -63,8 +63,8 @@ namespace ProgramSubMonitor
                     catch (FormatException fe)
                     {
                         MessageBox.Show(fe.Message);
-                        string timeToSent = timeText.Text;
-                        MethodInvoker mi = new MethodInvoker(() => timeToSent = "10");
+                        string timeToSent = "10";
+                        MethodInvoker mi = new MethodInvoker(() => timeText.Text = timeToSent);
                         Invoke(mi);
                     }
                 }
